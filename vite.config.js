@@ -1,6 +1,5 @@
-export default {
-  root: './',
-  server: {
-    port: 5173,
-  },
-};
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  base: './', // required for Render and relative asset loading
+});
