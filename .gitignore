@@ -1,1 +1,16 @@
-assets/67-cottage_free_blend/*.blend* 
+# Ignore node_modules
+node_modules/
+
+# Ignore build output
+dist/
+
+# Ignore log files and system junk
+.DS_Store
+npm-debug.log*
+
+# Ignore OS-specific files
+Thumbs.db
+*.blend
+*.blend1
+node_modules/ 
+dist/ 
