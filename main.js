@@ -48,8 +48,9 @@ scene.add(floor);
 
 // Load 3D house model
 const loader = new GLTFLoader();
+const cottageUrl = new URL('./models/Cottage_FREE.glb', import.meta.url);
 loader.load(
-  '/models/Cottage_FREE.glb',
+  cottageUrl.href,
   (gltf) => {
     const model = gltf.scene;
     model.scale.set(2, 2, 2);
@@ -62,7 +63,8 @@ loader.load(
 
 // Load animated character
 let character, mixer, walkAction;
-loader.load('/models/Catwalk2.glb', (gltf) => {
+const charUrl = new URL('./models/Catwalk2.glb', import.meta.url);
+loader.load(charUrl.href, (gltf) => {
   character = gltf.scene;
   character.scale.set(CHARACTER_SCALE, CHARACTER_SCALE, CHARACTER_SCALE);
   character.position.copy(CHARACTER_START_POSITION);
